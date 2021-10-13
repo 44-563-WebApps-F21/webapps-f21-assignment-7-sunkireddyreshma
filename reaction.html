@@ -19,37 +19,37 @@
   <button type="button" class="btn btn-danger" onclick="recordReact()">React Now</button>
 
   
-  <script> 
-    myTime = undefined;
-
-function recordReact() {
-  myTime = Date.now();
-  console.log("Time : " + myTime);
-}
-function startTime() {
-    myTime = undefined
-    buttonTime = Date.now()
-    var countd=Math.floor(Math.random()*(10-2)+2)
-      for(let i=0;i<countd+1;i++){
-        var j=(countd-i)*1000;
-        var p=i;
-        setTimeout(() => {
-          document.getElementById("countdown").innerHTML = i;
-        }, j)
-      }
-
-      setTimeout(() => {
-        if(myTime == undefined){
-          document.getElementById("target").innerHTML = "Too Slow";
-        }
-        
-        else{
-          var elapsedTime = (-1) * (buttonTime - myTime);
-          document.getElementById("target").innerHTML = "Time was "+elapsedTime+" ms";
-        }
-      }, countd*1000)
+  <script>  
+    var myTime = undefined
+    function recordReact() {
+        myTime = Date.now()
+        console.log(myTime)
     }
-  </script>
+  
+    function startTime() {
+      
+      for(let i=0; i<=3; i++){
+          setTimeout( ()=>{
+              document.getElementById("countdown").innerHTML = "Count: " + i
+          }, (3-i)*1000)
+      }
+      setTimeout(()=>{
+          checkMyTime()
+      }, 3000)
+    }
+  
+    function checkMyTime(){
+      var element = document.getElementById("target")
+      if(myTime == undefined)
+          element.innerHTML = "Too Slow"
+      else{
+          var buttonTime = Date.now()
+          var difference = buttonTime - myTime
+          element.innerHTML = "Time was " + difference
+      }
+    }
+    </script
+  
 
 </body>
 </html>
