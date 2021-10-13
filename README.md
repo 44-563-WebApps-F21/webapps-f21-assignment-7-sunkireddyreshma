@@ -3,6 +3,6 @@ An assignment on java script modifying the DOM and using anonymous callback func
 
 Hosted at https://44-563-webapps-f21.github.io/webapps-f21-assignment-7-sunkireddyreshma/search.html
 
-Hosted at https://44-563-webapps-f21.github.io/webapps-f21-assignment-7-sunkireddyreshma/reacton.html
+Hosted at https://44-563-webapps-f21.github.io/webapps-f21-assignment-7-sunkireddyreshma/reaction.html
 
 Hosted at https://44-563-webapps-f21.github.io/webapps-f21-assignment-7-sunkireddyreshma/stack.html
