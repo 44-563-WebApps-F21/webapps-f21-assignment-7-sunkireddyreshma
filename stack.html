@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html> <head>
+    <title>pop page with stack</title>
+     <style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: red;
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: green;
+	  }
+	}
+</style></head>
+
+
+
+<body>
+    <h1>Sunkireddy Reshma builds a stack</h1>
+
+    <input id="name" type="text"></input>
+		<div class="flex-container" id="target">
+		  <div>row item 1</div>   
+		  <div>row item 2</div>  
+		  <div>row item 3</div>  
+		</div>
+	
+	<p> Press the button to create an new element of type div and then add it to the container.
+		</p>
+		<button onclick="makeNewDiv()">Push value</button>
+		
+	
+	
+</body>
+<script>
+	function makeNewDiv(){
+		let element = document.createElement("div")
+		element.innerHTML = document.getElementById("name").value
+		element.className = "stack"
+
+		var Stack = document.getElementsByClassName("stack");
+		/* make the div and its text */
+
+		/* add it to the container */
+		document.getElementById('target').appendChild(element)
+		
+	}
+</script>
+</html>	
